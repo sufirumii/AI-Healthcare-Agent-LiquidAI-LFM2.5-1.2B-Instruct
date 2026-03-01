@@ -15,6 +15,9 @@ The system is designed strictly for **educational and research purposes**, with 
 - Monitoring: Basic logging and performance tracking (query count, response times)
 - Deployment: Docker support and configuration via environment variables
 
+## Demo
+<img width="1916" height="1044" alt="Screenshot 2026-03-01 at 8 18 08 PM" src="https://github.com/user-attachments/assets/3e0e7d25-ed9d-41a5-997e-7fcfbf382ef2" />
+
 ## Project Structure
 
 ```text
