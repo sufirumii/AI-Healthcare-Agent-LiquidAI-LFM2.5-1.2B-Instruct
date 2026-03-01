@@ -1,0 +1,64 @@
+# Medical AI Agent Configuration
+# =====================================
+
+# Model Configuration
+model:
+  name: "LiquidAI/LFM2.5-1.2B-Instruct"
+  device: "auto"
+  torch_dtype: "float16"
+  use_quantization: true
+  max_length: 2048
+  temperature: 0.3
+  top_p: 0.95
+
+# API Keys (set in .env file)
+apis:
+  pubmed:
+    email: "your_email@example.com"
+    tool: "MedicalAI-Agent"
+    max_results: 5
+  openai:  # Optional fallback
+    api_key: ""
+    model: "gpt-3.5-turbo"
+
+# Medical Knowledge Bases
+knowledge_bases:
+  - name: "medline_plus"
+    url: "https://medlineplus.gov/"
+    enabled: true
+  - name: "who_int"
+    url: "https://www.who.int/health-topics"
+    enabled: true
+  - name: "mayo_clinic"
+    url: "https://www.mayoclinic.org/diseases-conditions"
+    enabled: true
+
+# Retrieval Settings
+retrieval:
+  chunk_size: 512
+  chunk_overlap: 50
+  top_k: 5
+  similarity_threshold: 0.7
+  use_reranking: true
+
+# Memory Settings
+memory:
+  conversation_history: 10
+  vector_memory_size: 1000
+  cache_ttl: 3600  # 1 hour
+
+# UI Settings
+ui:
+  title: "🏥 Medical AI Agent"
+  subtitle: "Powered by LiquidAI + Medical Knowledge Bases"
+  theme: "soft"
+  font_size_large: true
+  show_sources: true
+  show_disclaimer: true
+  examples_per_page: 6
+
+# Logging
+logging:
+  level: "INFO"
+  format: "json"
+  file: "logs/medical_agent.log"
